@@ -1,31 +1,19 @@
-import salestaxsolution.Product
-import utilities.ProductTaxConstants
+import salesTaxSolution.Product
+
 import utilities.TaxUtility
 import spock.lang.Specification
 
 class TaxUtilityTest extends Specification {
-
-    def "should process information"() {
-        expect:
-        try {
-            TaxUtility.processInformation("1,book,23.45", new Product[4], 0);
-        }
-        catch (Exception) {}
-
-
-    }
-
-    def "should calculate total"() {
-        expect:
-        def temp = TaxUtility.calculateTotal(new double[4])
-    }
-
     def "should round values"() {
         expect:
         TaxUtility.round(12.9999999) == 13.0
         TaxUtility.round(14.4999) != 15
     }
 
-
+   def "should round values to nearest decimal"() {
+        expect:
+        TaxUtility.roundToNearestDecimalFive(35.899999) == 35.9
+        TaxUtility.roundToNearestDecimalFive(14.4999) != 15
+    }
 }
 

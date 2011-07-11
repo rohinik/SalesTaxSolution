@@ -1,8 +1,8 @@
-package salestaxsolution
+package salesTaxSolution
 
 import utilities.TaxCalculator
+import utilities.TaxConstants
 import utilities.TaxUtility
-import utilities.ProductTaxConstants
 
 class Product {
     private int quantity
@@ -12,14 +12,13 @@ class Product {
     private double taxAmount
     private TaxCalculator taxCalculator
     public boolean isImported;
+
     public Product(int quantity, String name, double price) {
         this.quantity = quantity
         this.name = name
         this.price = price
         taxCalculator = new TaxCalculator(this)
     }
-
-
 
     def getQuantity() {
         quantity
@@ -50,17 +49,15 @@ class Product {
     }
 
     def setItemType(String itemType) {
-        if(itemType.equalsIgnoreCase(ProductTaxConstants.IMPORTED_TYPE))
-           isImported=true
+        if (itemType.equalsIgnoreCase(TaxConstants.IMPORTED_TYPE))
+            isImported = true
         else
-           isImported=false
+            isImported = false
         this.itemType = itemType
     }
 
-    def getTotal() {
-        double temp = (this.quantity * this.getPrice())
-
-        temp
+    def getTotalPrice() {
+        this.quantity * this.getPrice()
     }
 
     def getTaxAmount() {
@@ -71,14 +68,12 @@ class Product {
         this.taxAmount = calculateTax()
     }
 
-    def getNetTotal() {
-        def temp = (getTotal() + getTaxAmount())
-
-        temp
+    def getNetTotalPrice() {
+        getTotalPrice() + getTaxAmount()
     }
 
     def double calculateTax() throws Exception {
-        double temp = taxCalculator.calculateBasicTax() + taxCalculator.calculateImportDutyTax()
+        double temp = taxCalculator.calculateBasicTax() + taxCalculator.calculateImportDuty()
         TaxUtility.roundToNearestDecimalFive(temp)
     }
 }

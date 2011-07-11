@@ -1,72 +1,66 @@
 package utilities
 
-import salestaxsolution.Product
+import salesTaxSolution.Product
 
 class TaxUtility {
-
-    def static calculateTotal(double[] total) {
-        double temp = 0.0;
-        for (int i = 0; i < total.length; i++) {
-            temp = temp + total[i]
+    def static calculateTotalPrice(double[] price) {
+        double totalPrice = 0.0;
+        for (int i = 0; i < price.length; i++) {
+            totalPrice = totalPrice + price[i]
         }
-        temp
+        totalPrice
     }
 
     def static roundToNearestDecimalFive(Double number) {
         int temporaryNumber = (int) (round(number) * 100);
-        int unitPlace = temporaryNumber % 10;
-        if (unitPlace % 5 != 0) {
-            temporaryNumber += Math.abs(unitPlace % 5 - 5)
+        int unitDigit = temporaryNumber % 10;
+        if (unitDigit % 5 != 0) {
+            temporaryNumber += Math.abs(unitDigit % 5 - 5)
         }
         double finalRoundedValue = temporaryNumber / 100.0;
-        return finalRoundedValue;
+        finalRoundedValue;
     }
 
     def static round(double value) {
-        double temp
         try {
             Double.parseDouble(String.format("%.2f", value))
         }
         catch (Exception) {}
-
     }
 
-    def static extractName(String value, boolean flag) {
-        String itemName
-        if (!flag)
-            itemName = value.substring(value.indexOf(ProductTaxConstants.SPACE) + 1, lastIndexOfSpaceInValue(value) - 3)
-        else
-            itemName = value.substring(value.lastIndexOf("imported") + 9, lastIndexOfSpaceInValue(value) - 3)
-        itemName
+    def static extractName(String value) {
+        String productName=value.substring(value.indexOf(TaxConstants.SPACE) + 1, indexOfLastBlankSpace(value) - 3)
+        productName
     }
 
-    def static processInformation(String value, Product[] item, int index) throws Exception {
+
+    def static processInformation(String value, Product[] product, int index) throws Exception {
         try {
             def itemQuantity = Integer.valueOf(extractQuantity(value))
-            def flag = value.contains("imported") ? true : false
-            def itemName = extractName(value, flag)
+            def isImported = value.contains("imported") ? true : false
+            def productName = extractName(value)
             def itemPrice = Double.valueOf(extractPrice(value))
-            item[index] = new Product(itemQuantity, itemName, itemPrice)
-            if (flag)
-                item[index].setItemType(ProductTaxConstants.IMPORTED_TYPE)
+            product[index] = new Product(itemQuantity, productName, itemPrice)
+            if (isImported)
+                product[index].setItemType(TaxConstants.IMPORTED_TYPE)
             else
-                item[index].setItemType(ProductTaxConstants.LOCAL_TYPE)
+                product[index].setItemType(TaxConstants.LOCAL_TYPE)
         }
         catch (Exception) {}
-        return item
+        product
     }
 
     private static String extractPrice(String value) {
-        String itemPrice = value.substring(lastIndexOfSpaceInValue(value) + 1, value.length())
-        return itemPrice
+        String productPrice = value.substring(indexOfLastBlankSpace(value) + 1, value.length())
+        productPrice
     }
 
-    private static int lastIndexOfSpaceInValue(String value) {
-        return value.lastIndexOf(ProductTaxConstants.SPACE)
+    private static int indexOfLastBlankSpace(String value) {
+        value.lastIndexOf(TaxConstants.SPACE)
     }
 
     private static String extractQuantity(String value) {
-        String itemQuantity = value.substring(0, value.indexOf(ProductTaxConstants.SPACE))
-        itemQuantity
+        String productQuantity = value.substring(0, value.indexOf(TaxConstants.SPACE))
+        productQuantity
     }
 }

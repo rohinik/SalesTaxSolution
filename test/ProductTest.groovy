@@ -1,6 +1,6 @@
-import utilities.ProductTaxConstants
+import utilities.TaxConstants
 import spock.lang.Specification
-import salestaxsolution.Product;
+import salesTaxSolution.Product;
 
 
 public class ProductTest extends Specification {
@@ -51,25 +51,14 @@ public class ProductTest extends Specification {
         when:
         product.setItemType("IMPORTED")
         then:
-        product.getItemType() == ProductTaxConstants.IMPORTED_TYPE
+        product.getItemType() == TaxConstants.IMPORTED_TYPE
     }
 
     def "should get total"() {
         expect:
-        product.getTotal() == 12.49
+        product.getTotalPrice() == 12.49
 
     }
-
-    def "should get tax amount"() {
-
-        expect:
-        product.getTaxAmount() == 0.0
-
-
-    }
-
-
-
-}
+   }
 
 
