@@ -7,7 +7,7 @@ public class TaxCalculatorTest extends Specification {
 
     def "should calculate basic tax"() {
         when:
-        Product product = new Product(1, "perfume", 12.49)
+        Product product = new Product(quantity: 1, name: "perfume", price: 12.49)
         TaxCalculator taxCalculator = new TaxCalculator(product)
         product.setItemType(TaxConstants.LOCAL_TYPE)
         double basicTaxValue
@@ -22,17 +22,13 @@ public class TaxCalculatorTest extends Specification {
 
     def "should calculate import duty"() {
         when:
-        Product product = new Product(1, "book", 12.49)
+        Product product = new Product(quantity: 1, name: "book", price: 12.49)
         TaxCalculator taxCalculator = new TaxCalculator(product)
         product.setItemType(TaxConstants.IMPORTED_TYPE)
         double importedTaxValue
-        try {
-            importedTaxValue = taxCalculator.calculateImportDuty()
-        }
-        catch (Exception) {
-        }
-        then:
+        importedTaxValue = taxCalculator.calculateImportDuty()
 
+        then:
         importedTaxValue == 0.6245
     }
 }

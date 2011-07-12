@@ -4,9 +4,9 @@ public class ShopKeeper {
     public static void main(String[] args) {
 
         ShopKeeper shopKeeper = new ShopKeeper()
-        BasketOfProducts batchOfProducts = new BasketOfProducts()
+        BasketOfProducts basketOfProducts = new BasketOfProducts()
         String[] informationOfProducts = shopKeeper.readProductsFromFile()
-        double grandTotal = batchOfProducts.processInput(informationOfProducts, informationOfProducts.size())
+        basketOfProducts.createProduct(informationOfProducts)
     }
 
     def readProductsFromFile() {

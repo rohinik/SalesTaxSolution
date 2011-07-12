@@ -15,5 +15,6 @@ public class Receipt {
         println("******************************************************************************")
         println("\t\t\t\t\t Sales Tax :" + basketOfProducts.getTotalSalesTaxOfBasket().round(2))
         println("\t\t\t\t\t Total:" + basketOfProducts.getTotalPriceOfBasket().round(2))
+
     }
 }

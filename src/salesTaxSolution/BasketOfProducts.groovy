@@ -1,5 +1,6 @@
 package salesTaxSolution
-import utilities.TaxUtility
+
+import utilities.TaxCalculator
 
 class BasketOfProducts {
     private double[] totalPrice = new double[10]
@@ -8,7 +9,7 @@ class BasketOfProducts {
     private int size
 
     def getBasicPriceOfBasket() {
-        TaxUtility.calculateTotalPrice(totalPrice)
+        TaxCalculator.calculateTotalPrice(totalPrice)
     }
 
     def setTotalPriceOfProduct(double productTotal, int index) {
@@ -20,7 +21,7 @@ class BasketOfProducts {
     }
 
     def getTotalSalesTaxOfBasket() {
-        TaxUtility.calculateTotalPrice(totalSalesTax)
+        TaxCalculator.calculateTotalPrice(totalSalesTax)
     }
 
     def getTotalPriceOfBasket() {
@@ -35,37 +36,20 @@ class BasketOfProducts {
         this.products = products
     }
 
-    def getSizeOfBasket() {
-        size
-    }
-
-    def setSizeOfBasket(int size) {
-        this.size = size
-    }
-
     def getSalesTaxForEachProduct(int index) {
         totalSalesTax[index]
     }
 
-    def createProducts(String value, int index) throws Exception {
-        products = TaxUtility.processInformation(value, products, index)
-        products[index].setTaxAmount()
-        setTotalPriceOfProduct(products[index].getTotalPrice(), index)
-        setTotalSalesTax(products[index].getTaxAmount(), index)
-    }
-
-    def processInput(String[] value, int index) {
-        setSizeOfBasket(Integer.valueOf(index))
-        products = new Product[getSizeOfBasket()]
+    def createProduct(String[] billInformation) {
+        products = new Product[billInformation.size()]
         setProductsInBasket(products)
-        try {
-            for (int i; i < getSizeOfBasket(); i++) {
-                createProducts(value[i], i)
-            }
-            Receipt.generateReceipt(products, this)
+        for (int i; i < billInformation.size(); i++) {
+            products[i] = ProcessBillInformation.getProductFromBillInformation(billInformation[i])
+            setTotalPriceOfProduct(products[i].getTotalPrice(), i)
+            setTotalSalesTax(products[i].getTaxAmount(), i)
         }
-        catch (Exception) {
-        }
+        Receipt.generateReceipt(products, this)
         getTotalPriceOfBasket().round(2)
     }
+
 }

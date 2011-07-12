@@ -2,47 +2,15 @@ package salesTaxSolution
 
 import utilities.TaxCalculator
 import utilities.TaxConstants
-import utilities.TaxUtility
 
 class Product {
-    private int quantity
-    private String name
-    private double price
-    private String itemType
-    private double taxAmount
-    private TaxCalculator taxCalculator
-    public boolean isImported;
-
-    public Product(int quantity, String name, double price) {
-        this.quantity = quantity
-        this.name = name
-        this.price = price
-        taxCalculator = new TaxCalculator(this)
-    }
-
-    def getQuantity() {
-        quantity
-    }
-
-    def setQuantity(int quantity) {
-        this.quantity = quantity
-    }
-
-    def getName() {
-        this.name
-    }
-
-    def setName(String name) {
-        this.name = name
-    }
-
-    def getPrice() {
-        price
-    }
-
-    def setPrice(double price) {
-        this.price = price
-    }
+    int quantity
+    String name
+    double price
+    String itemType
+    double taxAmount
+    TaxCalculator taxCalculator
+    boolean isImported;
 
     def getItemType() {
         itemType
@@ -73,7 +41,9 @@ class Product {
     }
 
     def double calculateTax() throws Exception {
+        taxCalculator = new TaxCalculator(this)
         double temp = taxCalculator.calculateBasicTax() + taxCalculator.calculateImportDuty()
-        TaxUtility.roundToNearestDecimalFive(temp)
+        taxAmount = taxCalculator.roundToNearestDecimalFive(temp)
+
     }
 }
