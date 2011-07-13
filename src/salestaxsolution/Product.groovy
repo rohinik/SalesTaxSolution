@@ -12,9 +12,6 @@ class Product {
     TaxCalculator taxCalculator
     boolean isImported;
 
-    def getItemType() {
-        itemType
-    }
 
     def setItemType(String itemType) {
         if (itemType.equalsIgnoreCase(TaxConstants.IMPORTED_TYPE))
@@ -28,9 +25,6 @@ class Product {
         this.quantity * this.getPrice()
     }
 
-    def getTaxAmount() {
-        taxAmount
-    }
 
     def setTaxAmount() {
         this.taxAmount = calculateTax()

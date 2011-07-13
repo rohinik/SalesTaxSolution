@@ -11,6 +11,7 @@ public class Receipt {
                     "\t" + products[i].getName() + ":" +
                     "\t" + (products[i].getName().length() > 7 ? "" : "\t") + "\t" +
                     products[i].getNetTotalPrice().round(2))
+
         }
         println("******************************************************************************")
         println("\t\t\t\t\t Sales Tax :" + basketOfProducts.getTotalSalesTaxOfBasket().round(2))

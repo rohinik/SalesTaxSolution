@@ -25,10 +25,7 @@ public class TaxCalculator {
     }
 
     def static round(double value) {
-        try {
             Double.parseDouble(String.format("%.2f", value))
-        }
-        catch (Exception) {}
     }
 
     def getProduct() {
