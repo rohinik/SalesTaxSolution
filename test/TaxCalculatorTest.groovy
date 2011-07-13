@@ -31,4 +31,16 @@ public class TaxCalculatorTest extends Specification {
         then:
         importedTaxValue == 0.6245
     }
+
+    def "should round the number to the nearest decimal"() {
+        expect:
+        TaxCalculator.roundToNearestDecimalFive(45.4988) == 45.5
+        TaxCalculator.roundToNearestDecimalFive(12.888) == 12.9
+    }
+
+    def "should round the number by 2 digits"() {
+        expect:
+        TaxCalculator.round(45.3333) == 45.33
+        TaxCalculator.round(12.9888) == 12.99
+    }
 }
