@@ -3,6 +3,7 @@ package salesTaxSolution
 import utilities.TaxConstants
 
 class ProcessBillInformation {
+
     def static getProductFromBillInformation(String value) {
         def itemQuantity = Integer.valueOf(extractQuantity(value))
         def isImported = value.contains("imported") ? true : false
@@ -18,8 +19,7 @@ class ProcessBillInformation {
     }
 
     private static String extractPrice(String value) {
-        String productPrice = value.substring(indexOfLastBlankSpace(value) + 1, value.length())
-        productPrice
+        value.substring(indexOfLastBlankSpace(value) + 1, value.length())
     }
 
     private static int indexOfLastBlankSpace(String value) {
@@ -27,12 +27,10 @@ class ProcessBillInformation {
     }
 
     private static String extractQuantity(String value) {
-        String productQuantity = value.substring(0, value.indexOf(TaxConstants.SPACE))
-        productQuantity
+        value.substring(0, value.indexOf(TaxConstants.SPACE))
     }
 
     def static extractName(String value) {
-        String productName = value.substring(value.indexOf(TaxConstants.SPACE) + 1, indexOfLastBlankSpace(value) - 3)
-        productName
+        value.substring(value.indexOf(TaxConstants.SPACE) + 1, indexOfLastBlankSpace(value) - 3)
     }
 }

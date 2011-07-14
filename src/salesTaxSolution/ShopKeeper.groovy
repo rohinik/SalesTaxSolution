@@ -1,16 +1,22 @@
 package salesTaxSolution
 
-public class ShopKeeper {
-    public static void main(String[] args) {
 
-        ShopKeeper shopKeeper = new ShopKeeper()
-        BasketOfProducts basketOfProducts = new BasketOfProducts()
-        String[] informationOfProducts = shopKeeper.readProductsFromFile()
-        basketOfProducts.createProduct(informationOfProducts)
-    }
+public class Shopkeeper {
+    public static void generateReceipt(Product[] products, BasketOfProducts basketOfProducts) {
+        println("******************************************************************************")
+        println("RECEIPT")
+        println("******************************************************************************")
 
-    def readProductsFromFile() {
-        List line = new File("ProductList").readLines()
-        line
+        for (int i = 0; i < products.length; i++) {
+            println("\t" + products[i].getQuantity() +
+                    "\t" + products[i].getName() + ":" +
+                    "\t" + (products[i].getName().length() > 7 ? "" : "\t") + "\t" +
+                    products[i].getNetTotalPrice().round(2))
+
+        }
+        println("******************************************************************************")
+        println("\t\t\t\t\t Sales Tax :" + basketOfProducts.getTotalSalesTaxForBasket().round(2))
+        println("\t\t\t\t\t Total:" + basketOfProducts.getTotalPriceOfBasket().round(2))
+
     }
 }

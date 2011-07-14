@@ -11,11 +11,8 @@ public class TaxCalculatorTest extends Specification {
         TaxCalculator taxCalculator = new TaxCalculator(product)
         product.setItemType(TaxConstants.LOCAL_TYPE)
         double basicTaxValue
-        try {
-            basicTaxValue = taxCalculator.calculateBasicTax()
-        }
-        catch (Exception) {
-        }
+        basicTaxValue = taxCalculator.calculateBasicTax()
+
         then:
         basicTaxValue == 1.249
     }

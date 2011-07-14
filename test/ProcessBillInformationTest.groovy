@@ -7,8 +7,8 @@ class ProcessBillInformationTest extends Specification {
 
     def "should get the product from bill information"() {
         when:
-        String basket = "1 imported book at 24.50"
-        product = ProcessBillInformation.getProductFromBillInformation(basket)
+        String billInformation = "1 imported book at 24.50"
+        product = ProcessBillInformation.getProductFromBillInformation(billInformation)
         then:
         product.name == "imported book"
     }
