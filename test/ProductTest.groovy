@@ -1,64 +1,53 @@
-import utilities.TaxConstants
+import salesTaxSolution.Product
 import spock.lang.Specification
-import salesTaxSolution.Product;
 
+class ProductTest extends Specification {
 
-public class ProductTest extends Specification {
-    Product product = new Product(1, "book", 12.49)
+    def "should create product"() {
+        when:
+        Product product = new Product(quantity:1,name:"imported book",price:45.56)
+        product.setItemType("imported")
 
-    def "should get the quantity"() {
-        expect:
+        then:
+        product.getName() == "imported book"
+        product.getPrice() == 45.56
         product.getQuantity() == 1
+        product.isIsImported() == true
+
     }
 
-    def "should set the quantity"() {
+    def "should calculate total price of product"() {
         when:
-        product.setQuantity(2)
+        Product product = new Product(quantity:2 ,name:"imported book",price:45.56)
+        product.setItemType("imported")
         then:
-        product.getQuantity() == 2
+
+        product.getTotalPrice() == 91.12
 
     }
 
-    def "should get the name"() {
-
-        expect:
-        product.getName() == "book"
-
-    }
-
-    def "should set the name"() {
+    def "should calculate net total price of product"() {
         when:
-        product.setName("chocolate")
-
+        Product product = new Product(quantity:2 ,name:"imported book",price:45.56)
+        product.setItemType("imported")
+        product.setTaxAmount()
         then:
-        product.getName() == "chocolate"
-    }
 
-    def "should get the price"() {
-        expect:
-        product.getPrice() == 12.49
-    }
-
-    def "should set the price"() {
-        when:
-        product.setPrice(12.34)
-
-        then:
-        product.getPrice() == 12.34
-    }
-
-    def "should get the item type"() {
-        when:
-        product.setItemType("IMPORTED")
-        then:
-        product.getItemType() == TaxConstants.IMPORTED_TYPE
-    }
-
-    def "should get total"() {
-        expect:
-        product.getTotalPrice() == 12.49
+        product.getNetTotalPrice() == 93.42
 
     }
-   }
 
 
+    def "should calculate tax product"() {
+           when:
+           Product product = new Product(quantity:2 ,name:"imported book",price:45.56)
+           product.setItemType("imported")
+           then:
+
+           product.calculateTax() == 2.3
+
+       }
+
+
+
+}

@@ -19,18 +19,15 @@
       <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\src\utilities\ProductTaxConstants.groovy" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\src\utilities\TaxUtility.groovy" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\test\ProductTaxConstantsTest.groovy" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\test\ProductTest.groovy" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\test\ReceiptTest.groovy" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\test\ShopkeeperTest.groovy" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\test\TaxConstantsTest.groovy" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\rohinik\SalesTaxSolution\test\TaxUtilityTest.groovy" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/salesTaxSolution/BasketOfProducts.groovy" afterPath="$PROJECT_DIR$/src/salesTaxSolution/BasketOfProducts.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProductList" afterPath="$PROJECT_DIR$/ProductList" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/salesTaxSolution/ProcessBillInformation.groovy" afterPath="$PROJECT_DIR$/src/salesTaxSolution/ProcessBillInformation.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utilities/TaxCalculator.groovy" afterPath="$PROJECT_DIR$/src/utilities/TaxCalculator.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/BasketOfProductTest.groovy" afterPath="$PROJECT_DIR$/test/BasketOfProductTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ProcessBillInformationTest.groovy" afterPath="$PROJECT_DIR$/test/ProcessBillInformationTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TaxCalculatorTest.groovy" afterPath="$PROJECT_DIR$/test/TaxCalculatorTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ProductTest.groovy" afterPath="$PROJECT_DIR$/test/ProductTest.groovy" />
     </list>
     <ignored path="SalesTaxSolution.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,28 +86,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BasketOfProducts.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/BasketOfProducts.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductList" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProductList">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BasketOfProductTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/BasketOfProductTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="57" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
+            <state line="23" column="32" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasketOfProducts.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/BasketOfProducts.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="2" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shopkeeper.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/Shopkeeper.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="17" selection-start="985" selection-end="985" vertical-scroll-proportion="0.9018568">
               <folding />
             </state>
           </provider>
@@ -119,16 +116,52 @@
       <file leaf-file-name="TaxCalculatorTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/TaxCalculatorTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+            <state line="14" column="28" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Customer.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/Customer.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessBillInformation.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/ProcessBillInformation.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="17" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/Product.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="528" selection-end="528" vertical-scroll-proportion="0.30136988">
+            <state line="42" column="1" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductTest.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ProductTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="22" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessBillInformationTest.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ProcessBillInformationTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="6" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,12 +191,15 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/Product.groovy" />
-        <option value="$PROJECT_DIR$/test/ProductTest.groovy" />
         <option value="$PROJECT_DIR$/test/ClientTest.groovy" />
         <option value="$PROJECT_DIR$/ProductList" />
+        <option value="$PROJECT_DIR$/src/salesTaxSolution/ShopKeeper.groovy" />
+        <option value="$PROJECT_DIR$/src/salesTaxSolution/ProcessBillInformation.groovy" />
+        <option value="$PROJECT_DIR$/test/ProductTest.groovy" />
+        <option value="$PROJECT_DIR$/test/BasketOfProductTest.groovy" />
         <option value="$PROJECT_DIR$/src/salesTaxSolution/Product.groovy" />
         <option value="$PROJECT_DIR$/src/salesTaxSolution/BasketOfProducts.groovy" />
-        <option value="$PROJECT_DIR$/src/salesTaxSolution/ShopKeeper.groovy" />
+        <option value="$PROJECT_DIR$/src/salesTaxSolution/Shopkeeper.groovy" />
       </list>
     </option>
   </component>
@@ -202,8 +238,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,16 +335,16 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Application.ShopKeeper">
-    <configuration default="false" name="ProductTaxConstantsTest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="Application.Customer">
+    <configuration default="false" name="BasketOfProductTest.should get total price of basket" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="SalesTaxSolution" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProductTaxConstantsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="BasketOfProductTest" />
+      <option name="METHOD_NAME" value="should get total price of basket" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -323,38 +359,15 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="TaxCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="BasketOfProductTest.should calculate total sales tax of basket" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="SalesTaxSolution" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TaxCalculatorTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TaxUtilityTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" />
-      <module name="SalesTaxSolution" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TaxUtilityTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="BasketOfProductTest" />
+      <option name="METHOD_NAME" value="should calculate total sales tax of basket" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -392,14 +405,37 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ShopKeeper" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="BasketOfProductTest.should calculate the tax for given basket 1" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" />
+      <module name="SalesTaxSolution" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasketOfProductTest" />
+      <option name="METHOD_NAME" value="should calculate the tax for given basket 1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Customer" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false">
         <pattern>
           <option name="PATTERN" value="salesTaxSolution.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="salesTaxSolution.ShopKeeper" />
+      <option name="MAIN_CLASS_NAME" value="salesTaxSolution.Customer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -504,11 +540,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ProductTaxConstantsTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TaxCalculatorTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TaxUtilityTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.All in SalesTaxSolution" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ShopKeeper" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BasketOfProductTest.should get total price of basket" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BasketOfProductTest.should calculate total sales tax of basket" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.All in SalesTaxSolution" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BasketOfProductTest.should calculate the tax for given basket 1" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Customer" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -544,7 +580,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1278" height="758" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -554,17 +590,17 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32921812" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26584363" sideWeight="0.6709062" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290938" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -665,40 +701,63 @@
         <state line="5" column="54" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/BasketOfProducts.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProductList">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" />
+        <state line="1" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/BasketOfProductTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="57" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="23" column="32" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/TaxCalculatorTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" />
+        <state line="14" column="28" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CustomerTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/ProcessBillInformation.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="17" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/Product.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="528" selection-end="528" vertical-scroll-proportion="0.30136988">
+        <state line="42" column="1" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ProductTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="22" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ProcessBillInformationTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CustomerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/Customer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/BasketOfProducts.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="2" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salesTaxSolution/Shopkeeper.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="985" selection-end="985" vertical-scroll-proportion="0.9018568">
           <folding />
         </state>
       </provider>

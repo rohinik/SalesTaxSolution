@@ -4,6 +4,20 @@ import spock.lang.Specification
 public class BasketOfProductTest extends Specification {
     BasketOfProducts basketOfProducts
 
+    def "should calculate total price of basket"(){
+        when:
+        basketOfProducts=new BasketOfProducts(totalPrice:[45.67,67.56])
+        then:
+        basketOfProducts.getTotalPriceOfBasket()==113.23
+    }
+
+    def "should calculate total sales tax of basket"(){
+        when:
+        basketOfProducts=new BasketOfProducts(totalSalesTax:[45.67,67.56])
+        then:
+        basketOfProducts.getTotalSalesTaxForBasket()==113.23
+    }
+
     def "should calculate the tax for given basket 1"() throws Exception {
         when:
         String[] value = ["1 book at 12.49", "1 music CD at 14.99", "1 chocolate at 0.85"]
