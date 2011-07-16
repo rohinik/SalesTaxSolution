@@ -1,5 +1,4 @@
 package salesTaxSolution
-
 import utilities.TaxCalculator
 
 class BasketOfProducts {
@@ -9,7 +8,7 @@ class BasketOfProducts {
     private int basketSize
 
     def getTotalPriceOfBasket() {
-        (TaxCalculator.calculateTotalPrice(totalPrice) + getTotalSalesTaxForBasket())
+        (TaxCalculator.calculateTotalPrice(totalPrice) + getTotalSalesTaxForBasket()).round(2)
     }
 
     def getTotalSalesTaxForBasket() {
@@ -20,13 +19,11 @@ class BasketOfProducts {
         products = new Product[listOfProducts.size()]
         this.products = products
         for (int i; i < listOfProducts.size(); i++) {
-            products[i] = ProcessBillInformation.getProductFromBillInformation(listOfProducts[i])
+            products[i] = ProcessProductInformation.getProductFromBillInformation(listOfProducts[i])
             this.totalPrice[i] = products[i].getTotalPrice()
             this.totalSalesTax[i] = products[i].getTaxAmount()
         }
         Shopkeeper.generateReceipt(products, this)
-        getTotalPriceOfBasket().round(2)
     }
-
 }
 

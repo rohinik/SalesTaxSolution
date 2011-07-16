@@ -12,7 +12,6 @@ class Product {
     TaxCalculator taxCalculator
     boolean isImported;
 
-
     def setItemType(String itemType) {
         if (itemType.equalsIgnoreCase(TaxConstants.IMPORTED_TYPE))
             isImported = true
@@ -24,7 +23,6 @@ class Product {
     def getTotalPrice() {
         this.quantity * this.getPrice()
     }
-
 
     def setTaxAmount() {
         this.taxAmount = calculateTax()
@@ -38,6 +36,5 @@ class Product {
         taxCalculator = new TaxCalculator(this)
         double temp = taxCalculator.calculateBasicTax() + taxCalculator.calculateImportDuty()
         taxAmount = taxCalculator.roundToNearestDecimalFive(temp)
-
     }
 }

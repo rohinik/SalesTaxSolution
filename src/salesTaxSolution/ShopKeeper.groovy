@@ -1,6 +1,4 @@
 package salesTaxSolution
-
-
 public class Shopkeeper {
     public static void generateReceipt(Product[] products, BasketOfProducts basketOfProducts) {
         println("******************************************************************************")
