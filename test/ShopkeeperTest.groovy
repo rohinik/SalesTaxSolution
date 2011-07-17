@@ -1,18 +1,15 @@
-import salesTaxSolution.Product
-import salesTaxSolution.ShopKeeper
+import salesTaxSolution.Shopkeeper
 import spock.lang.Specification
 
 class ShopkeeperTest extends Specification {
-    Product[] products
-
     def "should read the data from file"() {
         when:
-        def f2 = new File('ProductList')
-        f2.write("check it\n")
+        def productListFile = new File('ProductList')
+        productListFile.write("1 imported book at 23.45\n")
+        Shopkeeper customer = new Shopkeeper()
 
-        ShopKeeper shopKeeper = new ShopKeeper()
         then:
-        String[] value = shopKeeper.readProductsFromFile()
-        value[0] == "check it"
+        String[] productInformation = customer.readProductsFromList()
+        productInformation[0] == "1 imported book at 23.45"
     }
 }

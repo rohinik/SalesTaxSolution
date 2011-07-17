@@ -18,13 +18,12 @@ class BasketOfProducts {
 
     def getTheProductFromShop(String[] listOfProducts) {
         products = new Product[listOfProducts.size()]
-        this.products = products
         for (int i; i < listOfProducts.size(); i++) {
             products[i] = ProcessProductInformation.getProductFromBillInformation(listOfProducts[i])
             this.totalPrice[i] = products[i].getTotalPrice()
             this.totalSalesTax[i] = products[i].getTaxAmount()
         }
-        Shopkeeper.generateReceipt(products, this)
+        ReceiptGenerator.generateReceipt(products, this)
     }
 }
 

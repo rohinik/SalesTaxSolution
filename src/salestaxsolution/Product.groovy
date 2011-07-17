@@ -7,17 +7,17 @@ class Product {
     int quantity
     String name
     double price
-    String itemType
+    String productType
     double taxAmount
     TaxCalculator taxCalculator
     boolean isImported;
 
     def setItemType(String itemType) {
-        if (itemType.equalsIgnoreCase(TaxConstants.IMPORTED_TYPE))
+        if (itemType.equalsIgnoreCase(TaxConstants.IMPORTED))
             isImported = true
         else
             isImported = false
-        this.itemType = itemType
+        this.productType = itemType
     }
 
     def getTotalPrice() {

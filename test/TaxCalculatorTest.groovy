@@ -9,7 +9,7 @@ public class TaxCalculatorTest extends Specification {
         when:
         Product product = new Product(quantity: 1, name: "perfume", price: 12.49)
         TaxCalculator taxCalculator = new TaxCalculator(product)
-        product.setItemType(TaxConstants.LOCAL_TYPE)
+        product.setItemType(TaxConstants.LOCAL)
         double basicTaxValue
         basicTaxValue = taxCalculator.calculateBasicTax()
 
@@ -21,7 +21,7 @@ public class TaxCalculatorTest extends Specification {
         when:
         Product product = new Product(quantity: 1, name: "book", price: 12.49)
         TaxCalculator taxCalculator = new TaxCalculator(product)
-        product.setItemType(TaxConstants.IMPORTED_TYPE)
+        product.setItemType(TaxConstants.IMPORTED)
         double importedTaxValue
         importedTaxValue = taxCalculator.calculateImportDuty()
 

@@ -1,10 +1,10 @@
 package salesTaxSolution
 
-public class Customer {
+public class Shopkeeper {
     public static void main(String[] args) {
-        Customer customer = new Customer()
+        Shopkeeper shopkeeper = new Shopkeeper()
         BasketOfProducts basketOfProducts = new BasketOfProducts()
-        String[] informationOfProducts = customer.readProductsFromList()
+        String[] informationOfProducts = shopkeeper.readProductsFromList()
         basketOfProducts.getTheProductFromShop(informationOfProducts)
     }
 

@@ -4,15 +4,15 @@ import utilities.TaxConstants
 
 class ProcessProductInformation {
     def static getProductFromBillInformation(String value) {
-        def itemQuantity = Integer.valueOf(extractQuantity(value))
+        def productQuantity = Integer.valueOf(extractQuantity(value))
         def isImported = value.contains("imported") ? true : false
         def productName = extractName(value)
-        def itemPrice = Double.valueOf(extractPrice(value))
-        Product product = new Product(quantity: itemQuantity, name: productName, price: itemPrice)
+        def productPrice = Double.valueOf(extractPrice(value))
+        Product product = new Product(quantity: productQuantity, name: productName, price: productPrice)
         if (isImported)
-            product.setItemType(TaxConstants.IMPORTED_TYPE)
+            product.setItemType(TaxConstants.IMPORTED)
         else
-            product.setItemType(TaxConstants.LOCAL_TYPE)
+            product.setItemType(TaxConstants.LOCAL)
         product.setTaxAmount()
         product
     }

@@ -2,7 +2,7 @@ import salesTaxSolution.ProcessProductInformation
 import salesTaxSolution.Product
 import spock.lang.Specification
 
-class ProcessBillInformationTest extends Specification {
+class ProcessProductInformationTest extends Specification {
     Product product
 
     def "should get the product from bill information"() {

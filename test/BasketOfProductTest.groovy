@@ -32,6 +32,7 @@ public class BasketOfProductTest extends Specification {
         when:
         basketOfProducts = new BasketOfProducts()
         String[] value = ["1 imported  chocolate at 10.00", "1 imported bottle of perfume at 47.50"]
+        basketOfProducts.getTheProductFromShop(value)
         then:
         basketOfProducts.getTotalPriceOfBasket() == 65.15
     }
@@ -40,7 +41,7 @@ public class BasketOfProductTest extends Specification {
         when:
         String[] value = ["1 imported bottle of perfume at 27.99", "1 bottle of perfume at 18.99", "1 packet of headache pills at 9.75", "1 box of imported chocolates at 11.25"]
         basketOfProducts = new BasketOfProducts()
-
+        basketOfProducts.getTheProductFromShop(value)
         then:
         basketOfProducts.getTotalPriceOfBasket() == 74.68
     }
