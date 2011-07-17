@@ -4,12 +4,11 @@ public class Shopkeeper {
         println("******************************************************************************")
         println("RECEIPT")
         println("******************************************************************************")
-
-        for (int i = 0; i < products.length; i++) {
-            println("\t" + products[i].getQuantity() +
-                    "\t" + products[i].getName() + ":" +
-                    "\t" + (products[i].getName().length() > 7 ? "" : "\t") + "\t" +
-                    products[i].getNetTotalPrice().round(2))
+        products.each{product->
+                    println("\t" + product.getQuantity() +
+                    "\t" + product.getName() + ":" +
+                    "\t" + (product.getName().length() > 7 ? "" : "\t") + "\t" +
+                    product.getNetTotalPrice().round(2))
 
         }
         println("******************************************************************************")

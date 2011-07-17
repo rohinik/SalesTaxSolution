@@ -1,4 +1,5 @@
 package salesTaxSolution
+
 import utilities.TaxCalculator
 
 class BasketOfProducts {

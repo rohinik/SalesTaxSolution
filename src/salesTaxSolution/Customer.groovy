@@ -5,10 +5,7 @@ public class Customer {
         Customer customer = new Customer()
         BasketOfProducts basketOfProducts = new BasketOfProducts()
         String[] informationOfProducts = customer.readProductsFromList()
-        if (informationOfProducts.size() == 0)
-            print "Please Enter Product Information in Product List File"
-        else
-            basketOfProducts.getTheProductFromShop(informationOfProducts)
+        basketOfProducts.getTheProductFromShop(informationOfProducts)
     }
 
     def readProductsFromList() {
@@ -17,6 +14,7 @@ public class Customer {
             line
         }
         catch (Exception e) {
+
             print "Please create ProductList"
         }
     }

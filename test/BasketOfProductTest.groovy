@@ -4,18 +4,18 @@ import spock.lang.Specification
 public class BasketOfProductTest extends Specification {
     BasketOfProducts basketOfProducts
 
-    def "should calculate total price of basket"(){
+    def "should calculate total price of basket"() {
         when:
-        basketOfProducts=new BasketOfProducts(totalPrice:[45.67,67.56])
+        basketOfProducts = new BasketOfProducts(totalPrice: [45.67, 67.56])
         then:
-        basketOfProducts.getTotalPriceOfBasket()==113.23
+        basketOfProducts.getTotalPriceOfBasket() == 113.23
     }
 
-    def "should calculate total sales tax of basket"(){
+    def "should calculate total sales tax of basket"() {
         when:
-        basketOfProducts=new BasketOfProducts(totalSalesTax:[45.67,67.56])
+        basketOfProducts = new BasketOfProducts(totalSalesTax: [45.67, 67.56])
         then:
-        basketOfProducts.getTotalSalesTaxForBasket()==113.23
+        basketOfProducts.getTotalSalesTaxForBasket() == 113.23
     }
 
     def "should calculate the total for given basket 1"() throws Exception {
@@ -25,7 +25,7 @@ public class BasketOfProductTest extends Specification {
         basketOfProducts.getTheProductFromShop(value)
 
         then:
-        basketOfProducts.getTotalPriceOfBasket()== 29.83
+        basketOfProducts.getTotalPriceOfBasket() == 29.83
     }
 
     def "should calculate the total for given basket 2"() throws Exception {

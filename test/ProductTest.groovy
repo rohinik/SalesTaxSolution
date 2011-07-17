@@ -5,20 +5,20 @@ class ProductTest extends Specification {
 
     def "should create product"() {
         when:
-        Product product = new Product(quantity:1,name:"imported book",price:45.56)
+        Product product = new Product(quantity: 1, name: "imported book", price: 45.56)
         product.setItemType("imported")
 
         then:
         product.getName() == "imported book"
         product.getPrice() == 45.56
         product.getQuantity() == 1
-        product.isIsImported() == true
+        product.isImported == true
 
     }
 
     def "should calculate total price of product"() {
         when:
-        Product product = new Product(quantity:2 ,name:"imported book",price:45.56)
+        Product product = new Product(quantity: 2, name: "imported book", price: 45.56)
         product.setItemType("imported")
         then:
 
@@ -28,7 +28,7 @@ class ProductTest extends Specification {
 
     def "should calculate net total price of product"() {
         when:
-        Product product = new Product(quantity:2 ,name:"imported book",price:45.56)
+        Product product = new Product(quantity: 2, name: "imported book", price: 45.56)
         product.setItemType("imported")
         product.setTaxAmount()
         then:
@@ -39,15 +39,14 @@ class ProductTest extends Specification {
 
 
     def "should calculate tax product"() {
-           when:
-           Product product = new Product(quantity:2 ,name:"imported book",price:45.56)
-           product.setItemType("imported")
-           then:
+        when:
+        Product product = new Product(quantity: 2, name: "imported book", price: 45.56)
+        product.setItemType("imported")
+        then:
 
-           product.calculateTax() == 2.3
+        product.calculateTax() == 2.3
 
-       }
-
+    }
 
 
 }

@@ -8,20 +8,17 @@ public class TaxCalculator {
 
     def static calculateTotalPrice(double[] price) {
         double totalPrice = 0.0;
-        for (int i = 0; i < price.length; i++) {
-            totalPrice = totalPrice + price[i]
-        }
+        price.each { item -> totalPrice += item }
         totalPrice
     }
 
     def static roundToNearestDecimalFive(Double number) {
-        int temporaryNumber = (int) (round(number) * 100);
+        int temporaryNumber = (int) (round(number) * 100)
         int unitDigit = temporaryNumber % 10;
         if (unitDigit % 5 != 0) {
             temporaryNumber += Math.abs(unitDigit % 5 - 5)
         }
-        double finalRoundedValue = temporaryNumber / 100.0;
-        finalRoundedValue;
+        temporaryNumber / 100.0
     }
 
     def static round(double value) {
